@@ -52,7 +52,7 @@ RUN apk --no-cache add supervisor openssl zip unzip curl && \
     sed -i "s|spring\.sql\.init\.data-locations\.*|#spring.sql.init.data-locations|g" /opt/${project_name}/${project_name}/BOOT-INF/classes/application.properties  && \
     sed -i "s|spring\.datasource\.data\.*||g" /opt/${project_name}/${project_name}/BOOT-INF/classes/application.properties  && \
     sed -i "s|spring\.jpa\.properties\.hibernate\.dialect.*|spring.jpa.properties.hibernate.dialect=${database_dialect}|g" /opt/${project_name}/${project_name}/BOOT-INF/classes/application.properties  && \
-    sed -i "s|spring\.kendo\.datasource\.jdbc-url.*|spring.kendo.datasource.jdbc-url=jdbc:${database_type}://kendo-tournament-database:${database_port}/${database_name}|g" /opt/${project_name}/${project_name}/BOOT-INF/classes/application.properties  && \
+    sed -i "s|spring\.kendo\.datasource\.jdbc-url.*|spring.kendo.datasource.jdbc-url=jdbc:${database_type}://dpg-cu3eqtpu0jms73djk29g-a/${database_name}|g" /opt/${project_name}/${project_name}/BOOT-INF/classes/application.properties  && \
     sed -i "s|spring\.kendo\.datasource\.username.*|spring.kendo.datasource.username=${database_user}|g" /opt/${project_name}/${project_name}/BOOT-INF/classes/application.properties  && \
     sed -i "s|spring\.kendo\.datasource\.password.*|spring.kendo.datasource.password=${database_password}|g" /opt/${project_name}/${project_name}/BOOT-INF/classes/application.properties  && \
     sed -i "s|spring\.jpa\.properties\.hibernate\.dialect.*|spring.jpa.properties.hibernate.dialect=${database_dialect}|g" /opt/${project_name}/${project_name}/BOOT-INF/classes/application.properties  && \
